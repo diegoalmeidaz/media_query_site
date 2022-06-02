@@ -7,22 +7,23 @@ html, body {
 
 .container {
     height: 100vh;
-    
+    width: 100%;
     display: grid;
     border: 1px solid black;
-    grid-template-rows: 1.5fr 1.5fr 10fr 1.5fr;
+    grid-template-rows: 1.5fr 1.5fr 10fr 1fr 1.5fr;
     grid-template-areas:
-        "menu"
+        "menu_mobile"
         "precio"
-        "contenido"
+        "contenido_mobile"
+        "page_selector"
         "footer";
     padding: 0px;
     
 }
 
-nav {
+.mobile_nav {
     padding: 10px;
-    grid-area: menu;
+    grid-area: menu_mobile;
     background: black;
     color: white;
     display: flex;
@@ -41,8 +42,8 @@ i {
     
 }
 
-.logogrub {
-    margin-right: 40%;
+.logogrubmob {
+    margin-right: 30%;
 }
 
 header {
@@ -52,43 +53,106 @@ header {
     color: black;
 }
 
-main {
-    grid-area: contenido;
+.cont_mobile {
+    grid-area: contenido_mobile;
     padding: 10px;
     background-color: bisque;
 }
 
+.cont_desktop {
+    display: none;
+}
+
+.page_selector {
+    grid-area: page_selector;
+    color: black;
+    background-color: bisque;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 footer {
     grid-area: footer;
-    background: #d02a1e;
-    color: bisqu;
+    background: red;
     padding: 10px;
 }
 
+.desktop_nav {
+    display: none;
+}
 
+.pagination {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
 
 
 @media (min-width: 576px) {
     .container {
         grid-template-areas: 
-            "menu precio"
-            "menu contenido"
-            "menu contenido"
-            "footer contenido";
+            "menu_desktop precio"
+            "menu_desktop contenido_desktop"
+            "menu_desktop contenido_desktop"
+            "footer page_selector";
         grid-template-columns: 2fr 10fr;
-        grid-template-rows: 2fr 10fr 2fr 3fr; 
+        grid-template-rows: 2fr 10fr 2fr 2fr; 
         grid-auto-flow: column;
-        width: fit-content;
+        width: 100%;
         
         
     }
 
-    .logogrub {
+    .logogrubmob {
         margin-right: 0px;
     }
 
-    #i nav {
+    .mobile_nav {
         display: none;
         
     }
+
+    .desktop_nav{
+    padding: 10px;
+    grid-area: menu_desktop;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    }
+
+    .logogrubdesk{
+        margin: 0px;
+    }
+
+    ul {
+        padding: 0px;
+    }
+
+    li {
+        list-style: none;
+        padding: 0px;
+    }
+
+    .cont_desktop {
+        grid-area: contenido_desktop;
+        padding: 10px;
+        background-color: bisque;
+        color: black;
+        display: flex;
+    }
+
+    .cont_mobile {
+        display: none;
+    }
+
 }
