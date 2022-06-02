@@ -1,0 +1,94 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+.container {
+    height: 100vh;
+    
+    display: grid;
+    border: 1px solid black;
+    grid-template-rows: 1.5fr 1.5fr 10fr 1.5fr;
+    grid-template-areas:
+        "menu"
+        "precio"
+        "contenido"
+        "footer";
+    padding: 0px;
+    
+}
+
+nav {
+    padding: 10px;
+    grid-area: menu;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    
+    
+}
+
+i {
+    color: white;
+    align-items: flex-end;
+    
+    
+}
+
+.logogrub {
+    margin-right: 40%;
+}
+
+header {
+    background-color: red;
+    grid-area: precio;
+    padding: 10px;
+    color: black;
+}
+
+main {
+    grid-area: contenido;
+    padding: 10px;
+    background-color: bisque;
+}
+
+footer {
+    grid-area: footer;
+    background: #d02a1e;
+    color: bisqu;
+    padding: 10px;
+}
+
+
+
+
+@media (min-width: 576px) {
+    .container {
+        grid-template-areas: 
+            "menu precio"
+            "menu contenido"
+            "menu contenido"
+            "footer contenido";
+        grid-template-columns: 2fr 10fr;
+        grid-template-rows: 2fr 10fr 2fr 3fr; 
+        grid-auto-flow: column;
+        width: fit-content;
+        
+        
+    }
+
+    .logogrub {
+        margin-right: 0px;
+    }
+
+    #i nav {
+        display: none;
+        
+    }
+}
