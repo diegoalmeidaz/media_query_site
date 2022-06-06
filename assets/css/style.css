@@ -1,0 +1,307 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: black;
+}
+
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    border: 1px solid black;
+    grid-template-rows: 1.5fr 1.5fr 10fr 1fr 1.5fr;
+    grid-template-areas:
+        "menu_mobile"
+        "precio"
+        "contenido_mobile"
+        "page_selector"
+        "footer";
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif; 
+    
+}
+
+.mobile_nav {
+    padding: 10px;
+    grid-area: menu_mobile;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    
+    
+}
+
+i {
+    color: white;
+    align-items: flex-end;
+    
+    
+}
+
+.logogrubmob {
+    margin-right: 30%;
+}
+
+header {
+    background-color: red;
+    grid-area: precio;
+    padding: 10px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: ;
+}
+
+/* CSS Barra de busqueda */
+
+input {
+    
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+.cont_mobile {
+    grid-area: contenido_mobile;
+    padding: 10px;
+    background-color: bisque;
+    display: flex;
+    flex: wrap;
+    justify-content: center;
+}
+
+.cont_desktop {
+    display: none;
+}
+
+.page_selector {
+    grid-area: page_selector;
+    color: black;
+    background-color: bisque;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    grid-area: footer;
+    background: red;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: small;
+}
+ .iconos {
+     align-content: center;
+     margin-bottom: 15px;
+     color: black;
+ }
+
+.desktop_nav {
+    display: none;
+}
+
+.pagination {
+    display: inline-block;
+  }
+  
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+
+  /* Seccion Tarjetas */
+
+  .tarjetamob {
+    width: 80%;
+    
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 12px;
+    
+    border-radius: 8px;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+   
+   }
+
+   .tarjetamob img {
+    border-radius: 7px;
+    max-width: 100%;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    object-fit: cover;
+    
+    
+    }
+
+    .tarjetamob button {
+        background-color:black;
+        border: 0;
+        color: red;
+        padding: 10px;
+        width: 100%;
+        font-weight: bold;
+        cursor: pointer;
+   
+    }
+
+    .tarjetamob p {
+        font-style: italic;
+        font-size: small;
+        padding: 10px;
+    }
+
+    .tarjetamob h2 {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+@media (min-width: 576px) {
+    .container {
+        grid-template-areas: 
+            "menu_desktop precio"
+            "menu_desktop contenido_desktop"
+            "menu_desktop contenido_desktop"
+            "footer page_selector";
+        grid-template-columns: 2fr 10fr;
+        grid-template-rows: 2fr 10fr 2fr 2fr; 
+        grid-auto-flow: column;
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif; 
+        
+        
+    }
+
+    .logogrubmob {
+        margin-right: 0px;
+    }
+
+    .mobile_nav {
+        display: none;
+        
+    }
+
+    .desktop_nav{
+    padding: 10px;
+    grid-area: menu_desktop;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    }
+
+    .logogrubdesk{
+        margin: 0px;
+    }
+
+    ul {
+        padding: 0px;
+    }
+
+    li {
+        list-style: none;
+        padding: 0px;
+    }
+
+    ..pagination {
+        margin-top:100px;
+    }
+
+    .cont_desktop {
+        grid-area: contenido_desktop;
+        padding: 10px;
+        background-color: bisque;
+        color: black;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        flex-shrink: 1;
+        justify-content: space-around;
+        
+    }
+
+
+    /* Seccion Tarjetas Desktop*/
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 25%;
+        max-height:auto;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+        display: block;
+        margin: 5px;
+        background-color: bisque;
+      }
+      
+      .card h1{
+          font-size: medium;
+          font-weight: bold;
+          margin-top: 20px;
+          
+      }
+
+    .price {
+        color: grey;
+        font-size: 22px;
+      }
+      
+    .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: red;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 15px;
+        
+      }
+      
+    .card button:hover {
+        opacity: 0.7;
+      }
+
+
+    /* Cortado de la parte mobile */
+
+    .cont_mobile {
+        display: none;
+    }
+
+
+
+    
+
+    
+
+
+}
