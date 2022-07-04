@@ -1,0 +1,49 @@
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.tarjeta {
+    width: 250px;
+    color: Red;
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 12px;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    background-color: Black;
+
+}
+
+button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height:30px;
+    border-radius: 2px;
+}
+
+.caja_info {
+    justify-content: center;
+    margin-top: 25%;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#color_bebida_2 {
+    border: 1px solid  black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
